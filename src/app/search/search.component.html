@@ -1,0 +1,28 @@
+<p>search works!</p>
+
+
+
+{{name}}
+<div class="form-outline">
+	<input type="text" id="form1" [(ngModel)]="name" class="form-control" />
+	<label class="form-label" for="form1">Example label</label>
+	<button (click)="submit()">test</button>
+  </div>
+<div>
+	
+	<ul *ngFor="let recipe of recipes">
+		<h1 *ngIf="recipe">{{item.q}}</h1>
+		<div *ngIf="recipe.length == 0; then thenBlock "></div>
+		<ng-template #thenBlock>Item not found</ng-template>
+		<li><img src={{recipe.recipe.image}} alt=""></li>
+		
+	</ul>
+	<!-- <p>{{item}}</p> -->
+</div>
+
+<!-- <div>
+	<p>{{dataItem.hits[0].recipe.calories}}</p>
+
+	<p>{{dataItem.hits[0].recipe.image}}</p>
+	<img src="{{dataItem.hits[0].recipe.image}}">
+</div> -->
